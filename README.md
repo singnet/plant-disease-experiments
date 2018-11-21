@@ -57,12 +57,23 @@ phase 3 : [experement and if possible generate Apprprate data
 
 	arguments
 
-		- --image        a path of image 
+		- --image       loaction of the image
 		- --segment     True to  Segment before prediction , False not to 
 		- --species     one of the Following Specious :  Apple,Cherry,Corn, Grape,Peach, Pepper,Potato,Strawberry, Sugercane, Tomato
+		- --model       what models do you want to use VGG or Inception_V3
 
 
-- before using that make sure you download the weights from [here for Inception_V3]() and  [here for VGG Models](https://drive.google.com/file/d/1AufdWYl-TfeicAmaweq6Gd8q3--vuBfA/view?usp=sharing) and extract all and put it in Plant_Disease_Detection_Benchmark_models/Models/  folder 
+
+# Examples
+
+
+		 >>  python main.py --image "test/a.jpg"
+		 >>  python main.py --image "test/a.jpg" --segment True
+		 >>  python main.py --image "test/a.jpg" --species "Apple"
+         >>  python main.py --image "test/a.jpg" --segment True --species "Apple"
+
+
+- before using that make sure you download the weights from    [here for VGG Models](https://drive.google.com/file/d/1AufdWYl-TfeicAmaweq6Gd8q3--vuBfA/view?usp=sharing) [here for Inception_V3]() and extract all and put it in Plant_Disease_Detection_Benchmark_models/Models/  folder 
 		
 - This will segment the image and predict the output class based on that . segmented image will be saved as the file name with "_masked" prefix.
 
