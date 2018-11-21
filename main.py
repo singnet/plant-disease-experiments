@@ -161,6 +161,8 @@ def get_species_model(model='VGG'):
     if model == 'VGG':
         return 'VGG_all_100p_94.h5'
     elif model == 'Inception_v3':
+        target_size_disease = (100, 100)
+        target_size_specious = (100, 100)
         return 'InceptionV3_scratch_segmentedSpecies_100p.h5'
 
 
@@ -204,8 +206,8 @@ if __name__ == "__main__":
 
     # if segment and species is not known     
     elif True == args.segment and args.species == '':
-        species,_ = predict(args.image,args.model)
-        predict_disease(args.image,species)
+        species,image_name = predict(args.image,args.model)
+        predict_disease(,species)
 
     #if segment and species is given
     elif True == args.segment and args.species != '' :
