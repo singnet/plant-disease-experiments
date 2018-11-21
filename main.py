@@ -161,10 +161,7 @@ def get_species_model(model='VGG'):
     if model == 'VGG':
         return 'VGG_all_100p_94.h5'
     elif model == 'Inception_v3':
-         '''
-            TO BE CHANGED
-        '''
-        return 'VGG_all_100p_94.h5'
+        return 'InceptionV3_scratch_segmentedSpecies_100p.h5'
 
 
 

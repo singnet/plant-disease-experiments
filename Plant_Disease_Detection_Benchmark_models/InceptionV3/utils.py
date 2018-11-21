@@ -14,8 +14,8 @@ BATCH_SIZE = 64
 FC_SIZE = 512
 NB_IV3_LAYERS_TO_FREEZE = 172
 
-TRAIN_DIR = "../../../Dataset/segmented_/train"
-VAL_DIR = "../../../Dataset/segmented_/val"
+TRAIN_DIR = "../dataset/segmentedspecies/train"
+VAL_DIR = "../dataset/segmentedspecies/val"
 
 MODEL_STORE_TEMPLATE = "../Models/InceptionV3-{}.h5"
 MODEL_LOG_TEMPLATE = "{}_iv3_log.csv"
@@ -46,7 +46,7 @@ def train_model(model, plot=False):
         CSVLogger(CSV_LOG_FILE)
     ]
     history_ft = model.fit_generator(train_generator, epochs=nb_epoch, steps_per_epoch=nb_train_samples // batch_size,
-                                   validation_data=validation_generator, use_multiprocessing=True,
+                                   validation_data=validation_generator, 
                                    validation_steps=nb_val_samples // batch_size,
                                    callbacks=callbacks)
 
