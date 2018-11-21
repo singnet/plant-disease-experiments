@@ -56,8 +56,9 @@
 
 ## we also trained Specious calssification networks and specified disease detection models
 
-**Species**
-- Based On VGG Arctecture 94%
+**All Species**
+- Based On VGG Arctecture from scratch 94%
+- Based On Inception_V3 Arctecture from scratch  99.06%
 
 **Apple**
 - Based On VGG Network  93.95%
