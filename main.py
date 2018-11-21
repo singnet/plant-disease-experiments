@@ -207,7 +207,7 @@ if __name__ == "__main__":
     # if segment and species is not known     
     elif True == args.segment and args.species == '':
         species,image_name = predict(args.image,args.model)
-        predict_disease(,species)
+        predict_disease(image_name,species)
 
     #if segment and species is given
     elif True == args.segment and args.species != '' :
