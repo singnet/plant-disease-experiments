@@ -2,8 +2,12 @@
 
 [Using Deep Learning for Image-Based Plant Disease Detection](https://arxiv.org/pdf/1604.03169.pdf) 
 
+
+
 **Resources:**
 - [Data set](https://github.com/spMohanty/PlantVillage-Dataset)
+
+- Additional dataset will be relesed 
 
 - [Models](https://gitlab.com/Israel777/Plant_Disease_Detection_models)
 
@@ -53,7 +57,7 @@ phase 3 : [experement and if possible generate Apprprate data
 
 # Usage
 
-	Python main.py [--image  IMAGE FILE] [--segment BOOLIAN PARAMETER] [--species SPECIES TYPE]
+	Python main.py [--image  IMAGE FILE] [--segment BOOLIAN PARAMETER] [--species SPECIES TYPE] [--Model PREDICTION_MODEL]
 
 	arguments
 
@@ -67,13 +71,12 @@ phase 3 : [experement and if possible generate Apprprate data
 # Examples
 
 
-		 >>  python main.py --image "test/a.jpg"
-		 >>  python main.py --image "test/a.jpg" --segment True
-		 >>  python main.py --image "test/a.jpg" --species "Apple"
-         >>  python main.py --image "test/a.jpg" --segment True --species "Apple"
+		 	# you can remove a part of arguments except image path
 
+		 >>  python main.py --image "test/a.jpg" --segment True --species "Apple" --model 'Inception_v3'
+	   
 
-- before using that make sure you download the weights from    [here for VGG Models](https://drive.google.com/file/d/1AufdWYl-TfeicAmaweq6Gd8q3--vuBfA/view?usp=sharing) [here for Inception_V3]() and extract all and put it in Plant_Disease_Detection_Benchmark_models/Models/  folder 
+- before using that make sure you download the weights from   [here for Inception_V3](https://drive.google.com/file/d/1PZ0SUyGbcKJidNcSfwKsnhR23O2PBl78/view?usp=sharing) and  [here for VGG Models](https://drive.google.com/file/d/1AufdWYl-TfeicAmaweq6Gd8q3--vuBfA/view?usp=sharing)  and extract all and put it in Plant_Disease_Detection_Benchmark_models/Models/  folder 
 		
 - This will segment the image and predict the output class based on that . segmented image will be saved as the file name with "_masked" prefix.
 
