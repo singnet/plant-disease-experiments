@@ -84,3 +84,6 @@ phase 3 : [experement and if possible generate Apprprate data
 - the images are traine with segmented network and lower performance on unsegmented dataset is expected 
 
 -  You can cheack the segmentation accuracy from saved image
+
+
+- Fill [this form](https://goo.gl/forms/ceQNkEimLL8NN1sF2) for bulk model accsess grants and future update Notification
